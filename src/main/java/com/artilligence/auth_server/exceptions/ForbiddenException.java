@@ -1,0 +1,7 @@
+package com.artilligence.auth_server.exceptions;
+
+public class ForbiddenException extends RuntimeException {
+    public ForbiddenException(String message) {
+        super(message);
+    }
+}
