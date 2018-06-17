@@ -112,21 +112,21 @@ public class OauthSessions extends TableImpl<OauthSessionsRecord> {
     public final TableField<OauthSessionsRecord, String> HTTP_REFERER = createField("http_referer", org.jooq.impl.SQLDataType.VARCHAR(255), this, "HTTP_REFERER");
 
     /**
-     * Create a <code>auth_java.oauth_sessions</code> pojo reference
+     * Create a <code>auth_java.oauth_sessions</code> table reference
      */
     public OauthSessions() {
         this(DSL.name("oauth_sessions"), null);
     }
 
     /**
-     * Create an aliased <code>auth_java.oauth_sessions</code> pojo reference
+     * Create an aliased <code>auth_java.oauth_sessions</code> table reference
      */
     public OauthSessions(String alias) {
         this(DSL.name(alias), OAUTH_SESSIONS);
     }
 
     /**
-     * Create an aliased <code>auth_java.oauth_sessions</code> pojo reference
+     * Create an aliased <code>auth_java.oauth_sessions</code> table reference
      */
     public OauthSessions(Name alias) {
         this(alias, OAUTH_SESSIONS);
@@ -197,7 +197,7 @@ public class OauthSessions extends TableImpl<OauthSessionsRecord> {
     }
 
     /**
-     * Rename this pojo
+     * Rename this table
      */
     @Override
     public OauthSessions rename(String name) {
@@ -205,7 +205,7 @@ public class OauthSessions extends TableImpl<OauthSessionsRecord> {
     }
 
     /**
-     * Rename this pojo
+     * Rename this table
      */
     @Override
     public OauthSessions rename(Name name) {

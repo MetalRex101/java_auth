@@ -8,7 +8,7 @@ import org.jooq.types.UInteger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component("EmailRepository")
+@Component
 public class EmailRepository {
     @Autowired
     private DSLContext dsl;

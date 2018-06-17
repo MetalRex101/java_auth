@@ -31,17 +31,9 @@ public class SessionManager {
             throw new UnauthorizedException("Cannot start session for anonymous user");
         }
 
-        try {
-            OauthSession session = repository.findSessionByClientIDAndUserID(client.getPojo().getId(), user.getPojo().getId());
+        OauthSession session = repository.findSessionByClientIDAndUserID(client.getPojo().getId(), user.getPojo().getId());
 
-            dsl.newRecord(OauthSessions.OAUTH_SESSIONS, session.getPojo())
-                    .setAccessExpiresAt(new Timestamp(new DateTime().plusMinutes(1).getMillis()))
-                    .setCode(codeGenerator.getRandomCode())
-                    .setAccessToken(null)
-                    .update();
-
-            return session;
-        } catch (NullPointerException e) {
+        if (session.getPojo() == null) {
             OauthSessionsRecord record = dsl.newRecord(OauthSessions.OAUTH_SESSIONS, new OauthSessionsRecord()
                     .setClientId(client.getPojo().getId())
                     .setUserId(user.getPojo().getId()))
@@ -50,9 +42,18 @@ public class SessionManager {
                     .setAccessToken(null);
             record.store();
 
-            com.artilligence.auth_server.tables.pojos.OauthSessions pojo = record.into(com.artilligence.auth_server.tables.pojos.OauthSessions.class);
+            com.artilligence.auth_server.tables.pojos.OauthSessions pojo =
+                    record.into(com.artilligence.auth_server.tables.pojos.OauthSessions.class);
 
             return new OauthSession(pojo);
         }
+
+        dsl.newRecord(OauthSessions.OAUTH_SESSIONS, session.getPojo())
+                .setAccessExpiresAt(new Timestamp(new DateTime().plusMinutes(1).getMillis()))
+                .setCode(codeGenerator.getRandomCode())
+                .setAccessToken(null)
+                .update();
+
+        return session;
     }
 }

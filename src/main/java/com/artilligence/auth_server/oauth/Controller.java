@@ -29,11 +29,11 @@ public class Controller {
     @GetMapping("/authorize")
     public void Authorize(
             HttpServletResponse response,
-            @RequestParam(value = "client_id", required = true) String clientId,
-            @RequestParam(value = "client_secret", required = true) String clientSecret,
-            @RequestParam(value = "redirect_url", required = true) String redirectUrl,
-            @RequestParam(value = "password", required = true) String password,
-            @RequestParam(value = "email", required = true) String email
+            @RequestParam(value = "client_id") String clientId,
+            @RequestParam(value = "client_secret") String clientSecret,
+            @RequestParam(value = "redirect_url") String redirectUrl,
+            @RequestParam(value = "password") String password,
+            @RequestParam(value = "email") String email
     ) throws IOException, NotFoundException, NoSuchAlgorithmException {
         OauthClient oauthClient = repository.getClient(clientId);
 

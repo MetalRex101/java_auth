@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import java.nio.charset.Charset;
 import java.util.Random;
 
-@Component("CodeGenerator")
+@Component
 public class CodeGenerator {
     public String getRandomCode() {
         return RandomStringUtils.random(128, true, true);

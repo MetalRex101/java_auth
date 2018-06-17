@@ -3,8 +3,8 @@ package com.artilligence.auth_server.domains;
 abstract class Domain {
     protected Object pojo;
 
-    public Domain(Object record) {
-        this.pojo = record;
+    public Domain(Object pojo) {
+        this.pojo = pojo;
     }
 
     abstract public Object getPojo();

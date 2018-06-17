@@ -108,21 +108,21 @@ public class Roles extends TableImpl<RolesRecord> {
     public final TableField<RolesRecord, UByte> STATUS = createField("status", org.jooq.impl.SQLDataType.TINYINTUNSIGNED.defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.TINYINTUNSIGNED)), this, "???./????.");
 
     /**
-     * Create a <code>auth_java.roles</code> pojo reference
+     * Create a <code>auth_java.roles</code> table reference
      */
     public Roles() {
         this(DSL.name("roles"), null);
     }
 
     /**
-     * Create an aliased <code>auth_java.roles</code> pojo reference
+     * Create an aliased <code>auth_java.roles</code> table reference
      */
     public Roles(String alias) {
         this(DSL.name(alias), ROLES);
     }
 
     /**
-     * Create an aliased <code>auth_java.roles</code> pojo reference
+     * Create an aliased <code>auth_java.roles</code> table reference
      */
     public Roles(Name alias) {
         this(alias, ROLES);
@@ -193,7 +193,7 @@ public class Roles extends TableImpl<RolesRecord> {
     }
 
     /**
-     * Rename this pojo
+     * Rename this table
      */
     @Override
     public Roles rename(String name) {
@@ -201,7 +201,7 @@ public class Roles extends TableImpl<RolesRecord> {
     }
 
     /**
-     * Rename this pojo
+     * Rename this table
      */
     @Override
     public Roles rename(Name name) {

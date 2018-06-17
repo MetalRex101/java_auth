@@ -102,21 +102,21 @@ public class OauthClients extends TableImpl<OauthClientsRecord> {
     public final TableField<OauthClientsRecord, String> SCOPE = createField("scope", org.jooq.impl.SQLDataType.VARCHAR(255), this, "????? ???????");
 
     /**
-     * Create a <code>auth_java.oauth_clients</code> pojo reference
+     * Create a <code>auth_java.oauth_clients</code> table reference
      */
     public OauthClients() {
         this(DSL.name("oauth_clients"), null);
     }
 
     /**
-     * Create an aliased <code>auth_java.oauth_clients</code> pojo reference
+     * Create an aliased <code>auth_java.oauth_clients</code> table reference
      */
     public OauthClients(String alias) {
         this(DSL.name(alias), OAUTH_CLIENTS);
     }
 
     /**
-     * Create an aliased <code>auth_java.oauth_clients</code> pojo reference
+     * Create an aliased <code>auth_java.oauth_clients</code> table reference
      */
     public OauthClients(Name alias) {
         this(alias, OAUTH_CLIENTS);
@@ -187,7 +187,7 @@ public class OauthClients extends TableImpl<OauthClientsRecord> {
     }
 
     /**
-     * Rename this pojo
+     * Rename this table
      */
     @Override
     public OauthClients rename(String name) {
@@ -195,7 +195,7 @@ public class OauthClients extends TableImpl<OauthClientsRecord> {
     }
 
     /**
-     * Rename this pojo
+     * Rename this table
      */
     @Override
     public OauthClients rename(Name name) {

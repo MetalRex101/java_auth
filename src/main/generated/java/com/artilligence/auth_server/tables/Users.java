@@ -140,21 +140,21 @@ public class Users extends TableImpl<UsersRecord> {
     public final TableField<UsersRecord, String> LANGUAGE = createField("language", org.jooq.impl.SQLDataType.VARCHAR(255), this, "");
 
     /**
-     * Create a <code>auth_java.users</code> pojo reference
+     * Create a <code>auth_java.users</code> table reference
      */
     public Users() {
         this(DSL.name("users"), null);
     }
 
     /**
-     * Create an aliased <code>auth_java.users</code> pojo reference
+     * Create an aliased <code>auth_java.users</code> table reference
      */
     public Users(String alias) {
         this(DSL.name(alias), USERS);
     }
 
     /**
-     * Create an aliased <code>auth_java.users</code> pojo reference
+     * Create an aliased <code>auth_java.users</code> table reference
      */
     public Users(Name alias) {
         this(alias, USERS);
@@ -225,7 +225,7 @@ public class Users extends TableImpl<UsersRecord> {
     }
 
     /**
-     * Rename this pojo
+     * Rename this table
      */
     @Override
     public Users rename(String name) {
@@ -233,7 +233,7 @@ public class Users extends TableImpl<UsersRecord> {
     }
 
     /**
-     * Rename this pojo
+     * Rename this table
      */
     @Override
     public Users rename(Name name) {

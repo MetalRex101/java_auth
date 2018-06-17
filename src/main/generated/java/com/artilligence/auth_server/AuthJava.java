@@ -46,32 +46,32 @@ public class AuthJava extends SchemaImpl {
     public static final AuthJava AUTH_JAVA = new AuthJava();
 
     /**
-     * The pojo <code>auth_java.emails</code>.
+     * The table <code>auth_java.emails</code>.
      */
     public final Emails EMAILS = com.artilligence.auth_server.tables.Emails.EMAILS;
 
     /**
-     * The pojo <code>auth_java.flyway_schema_history</code>.
+     * The table <code>auth_java.flyway_schema_history</code>.
      */
     public final FlywaySchemaHistory FLYWAY_SCHEMA_HISTORY = com.artilligence.auth_server.tables.FlywaySchemaHistory.FLYWAY_SCHEMA_HISTORY;
 
     /**
-     * The pojo <code>auth_java.oauth_clients</code>.
+     * The table <code>auth_java.oauth_clients</code>.
      */
     public final OauthClients OAUTH_CLIENTS = com.artilligence.auth_server.tables.OauthClients.OAUTH_CLIENTS;
 
     /**
-     * The pojo <code>auth_java.oauth_sessions</code>.
+     * The table <code>auth_java.oauth_sessions</code>.
      */
     public final OauthSessions OAUTH_SESSIONS = com.artilligence.auth_server.tables.OauthSessions.OAUTH_SESSIONS;
 
     /**
-     * The pojo <code>auth_java.passwords</code>.
+     * The table <code>auth_java.passwords</code>.
      */
     public final Passwords PASSWORDS = com.artilligence.auth_server.tables.Passwords.PASSWORDS;
 
     /**
-     * The pojo <code>auth_java.phones</code>.
+     * The table <code>auth_java.phones</code>.
      */
     public final Phones PHONES = com.artilligence.auth_server.tables.Phones.PHONES;
 
@@ -81,12 +81,12 @@ public class AuthJava extends SchemaImpl {
     public final Roles ROLES = com.artilligence.auth_server.tables.Roles.ROLES;
 
     /**
-     * The pojo <code>auth_java.users</code>.
+     * The table <code>auth_java.users</code>.
      */
     public final Users USERS = com.artilligence.auth_server.tables.Users.USERS;
 
     /**
-     * The pojo <code>auth_java.user_role</code>.
+     * The table <code>auth_java.user_role</code>.
      */
     public final UserRole USER_ROLE = com.artilligence.auth_server.tables.UserRole.USER_ROLE;
 

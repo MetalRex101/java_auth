@@ -105,21 +105,21 @@ public class FlywaySchemaHistory extends TableImpl<FlywaySchemaHistoryRecord> {
     public final TableField<FlywaySchemaHistoryRecord, Byte> SUCCESS = createField("success", org.jooq.impl.SQLDataType.TINYINT.nullable(false), this, "");
 
     /**
-     * Create a <code>auth_java.flyway_schema_history</code> pojo reference
+     * Create a <code>auth_java.flyway_schema_history</code> table reference
      */
     public FlywaySchemaHistory() {
         this(DSL.name("flyway_schema_history"), null);
     }
 
     /**
-     * Create an aliased <code>auth_java.flyway_schema_history</code> pojo reference
+     * Create an aliased <code>auth_java.flyway_schema_history</code> table reference
      */
     public FlywaySchemaHistory(String alias) {
         this(DSL.name(alias), FLYWAY_SCHEMA_HISTORY);
     }
 
     /**
-     * Create an aliased <code>auth_java.flyway_schema_history</code> pojo reference
+     * Create an aliased <code>auth_java.flyway_schema_history</code> table reference
      */
     public FlywaySchemaHistory(Name alias) {
         this(alias, FLYWAY_SCHEMA_HISTORY);
@@ -182,7 +182,7 @@ public class FlywaySchemaHistory extends TableImpl<FlywaySchemaHistoryRecord> {
     }
 
     /**
-     * Rename this pojo
+     * Rename this table
      */
     @Override
     public FlywaySchemaHistory rename(String name) {
@@ -190,7 +190,7 @@ public class FlywaySchemaHistory extends TableImpl<FlywaySchemaHistoryRecord> {
     }
 
     /**
-     * Rename this pojo
+     * Rename this table
      */
     @Override
     public FlywaySchemaHistory rename(Name name) {

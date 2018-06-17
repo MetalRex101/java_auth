@@ -77,21 +77,21 @@ public class UserRole extends TableImpl<UserRoleRecord> {
     public final TableField<UserRoleRecord, UInteger> ROLE_ID = createField("role_id", org.jooq.impl.SQLDataType.INTEGERUNSIGNED.nullable(false), this, "");
 
     /**
-     * Create a <code>auth_java.user_role</code> pojo reference
+     * Create a <code>auth_java.user_role</code> table reference
      */
     public UserRole() {
         this(DSL.name("user_role"), null);
     }
 
     /**
-     * Create an aliased <code>auth_java.user_role</code> pojo reference
+     * Create an aliased <code>auth_java.user_role</code> table reference
      */
     public UserRole(String alias) {
         this(DSL.name(alias), USER_ROLE);
     }
 
     /**
-     * Create an aliased <code>auth_java.user_role</code> pojo reference
+     * Create an aliased <code>auth_java.user_role</code> table reference
      */
     public UserRole(Name alias) {
         this(alias, USER_ROLE);
@@ -162,7 +162,7 @@ public class UserRole extends TableImpl<UserRoleRecord> {
     }
 
     /**
-     * Rename this pojo
+     * Rename this table
      */
     @Override
     public UserRole rename(String name) {
@@ -170,7 +170,7 @@ public class UserRole extends TableImpl<UserRoleRecord> {
     }
 
     /**
-     * Rename this pojo
+     * Rename this table
      */
     @Override
     public UserRole rename(Name name) {

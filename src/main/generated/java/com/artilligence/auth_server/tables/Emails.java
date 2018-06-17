@@ -103,21 +103,21 @@ public class Emails extends TableImpl<EmailsRecord> {
     public final TableField<EmailsRecord, Timestamp> CREATED_AT = createField("created_at", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.inline("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "??????");
 
     /**
-     * Create a <code>auth_java.emails</code> pojo reference
+     * Create a <code>auth_java.emails</code> table reference
      */
     public Emails() {
         this(DSL.name("emails"), null);
     }
 
     /**
-     * Create an aliased <code>auth_java.emails</code> pojo reference
+     * Create an aliased <code>auth_java.emails</code> table reference
      */
     public Emails(String alias) {
         this(DSL.name(alias), EMAILS);
     }
 
     /**
-     * Create an aliased <code>auth_java.emails</code> pojo reference
+     * Create an aliased <code>auth_java.emails</code> table reference
      */
     public Emails(Name alias) {
         this(alias, EMAILS);
@@ -188,7 +188,7 @@ public class Emails extends TableImpl<EmailsRecord> {
     }
 
     /**
-     * Rename this pojo
+     * Rename this table
      */
     @Override
     public Emails rename(String name) {
@@ -196,7 +196,7 @@ public class Emails extends TableImpl<EmailsRecord> {
     }
 
     /**
-     * Rename this pojo
+     * Rename this table
      */
     @Override
     public Emails rename(Name name) {

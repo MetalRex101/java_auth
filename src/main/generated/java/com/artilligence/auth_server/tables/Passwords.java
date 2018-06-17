@@ -82,21 +82,21 @@ public class Passwords extends TableImpl<PasswordsRecord> {
     public final TableField<PasswordsRecord, String> CODE = createField("code", org.jooq.impl.SQLDataType.VARCHAR(100), this, "??? ?????????????");
 
     /**
-     * Create a <code>auth_java.passwords</code> pojo reference
+     * Create a <code>auth_java.passwords</code> table reference
      */
     public Passwords() {
         this(DSL.name("passwords"), null);
     }
 
     /**
-     * Create an aliased <code>auth_java.passwords</code> pojo reference
+     * Create an aliased <code>auth_java.passwords</code> table reference
      */
     public Passwords(String alias) {
         this(DSL.name(alias), PASSWORDS);
     }
 
     /**
-     * Create an aliased <code>auth_java.passwords</code> pojo reference
+     * Create an aliased <code>auth_java.passwords</code> table reference
      */
     public Passwords(Name alias) {
         this(alias, PASSWORDS);
@@ -167,7 +167,7 @@ public class Passwords extends TableImpl<PasswordsRecord> {
     }
 
     /**
-     * Rename this pojo
+     * Rename this table
      */
     @Override
     public Passwords rename(String name) {
@@ -175,7 +175,7 @@ public class Passwords extends TableImpl<PasswordsRecord> {
     }
 
     /**
-     * Rename this pojo
+     * Rename this table
      */
     @Override
     public Passwords rename(Name name) {

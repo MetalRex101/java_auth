@@ -7,7 +7,7 @@ import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-@Component("PasswordHasher")
+@Component
 public class PasswordHasher {
     public String toMD5 (String password) {
         return DigestUtils.md5Hex(password);
